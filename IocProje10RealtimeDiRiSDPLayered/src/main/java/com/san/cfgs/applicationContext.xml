@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+  
+  <!-- configure Controller -->
+ <bean id="controller"   class="com.san.controller.CustomerController">
+ <constructor-arg ref= "service"/></bean>
+<bean id="service" class="com.san.service.CustomerService">
+   <constructor-arg ref="custdao"></constructor-arg></bean>
+  
+  <!-- Configure DAo -->
+  <bean id="custdao"  class="com.san.dao.CustomerDaoImple">
+  <constructor-arg ref="dataSource"></constructor-arg></bean>
+  
+  <bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+    <property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+    <property name="url" value="jdbc:mysql://localhost:3306/nineam" />
+    <property name="username" value="root" />
+    <property name="password" value="password" />
+</bean>
+     </beans>
