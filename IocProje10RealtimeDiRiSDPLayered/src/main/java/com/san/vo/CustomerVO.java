@@ -1,17 +1,17 @@
 package com.san.vo;
 
 public class CustomerVO {
-	Integer cno;
+	String cno;
 	String name;
 	String ccity;
-	Float pamt;
+	String pamt;
 	
-	float rate;
-	float time;
-	public Integer getCno() {
+	String rate;
+	String time;
+	public String getCno() {
 		return cno;
 	}
-	public void setCno(Integer cno) {
+	public void setCno(String cno) {
 		this.cno = cno;
 	}
 	public String getName() {
@@ -26,23 +26,22 @@ public class CustomerVO {
 	public void setCcity(String ccity) {
 		this.ccity = ccity;
 	}
-	public Float getPamt() {
+	public String getPamt() {
 		return pamt;
 	}
-	public void setPamt(Float pamt) {
+	public void setPamt(String pamt) {
 		this.pamt = pamt;
 	}
-	
-	public float getRate() {
+	public String getRate() {
 		return rate;
 	}
-	public void setRate(float rate) {
+	public void setRate(String rate) {
 		this.rate = rate;
 	}
-	public float getTime() {
+	public String getTime() {
 		return time;
 	}
-	public void setTime(float time) {
+	public void setTime(String time) {
 		this.time = time;
 	}
 	

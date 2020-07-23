@@ -18,12 +18,15 @@ CustomerController(CustomerService service)
 
 public String processCustomer(CustomerVO vo) throws Exception
 {
-	/*
-	 * dto.setCno(vo.getCno()); dto.setName(vo.getName());
-	 * dto.setCcity(vo.getCcity()); dto.setPamt(vo.getPamt());
-	 * dto.setRate(vo.getRate()); dto.setTime(vo.getTime());
-	 */
-	BeanUtils.copyProperties(vo, dto);
+	
+	  dto.setCno(Integer.valueOf(vo.getCno())); 
+	  dto.setName(vo.getName());
+	  dto.setCcity(vo.getCcity());
+	  dto.setPamt(Float.valueOf(vo.getPamt()));
+	  dto.setRate(Float.valueOf(vo.getRate())); 
+	  dto.setTime(Float.valueOf(vo.getTime()));
+	 
+	//BeanUtils.copyProperties(vo, dto);
 	String result=service.calculateSimpleIntrest(dto);
 	return result;
 	

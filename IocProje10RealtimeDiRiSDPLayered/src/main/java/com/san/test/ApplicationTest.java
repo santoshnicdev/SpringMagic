@@ -19,17 +19,17 @@ public class ApplicationTest {
 		CustomerController ctm=ctx.getBean("controller",CustomerController.class);
 		try (Scanner scn = new Scanner(System.in)) {
 			System.out.println("Enter Cno:");
-			vo.setCno(scn.nextInt());
+			vo.setCno(scn.next());
 			System.out.println("Enter Name:");
 			vo.setName(scn.next());
 			System.out.println("Enter City:");
 			vo.setCcity(scn.next());
 			System.out.println("Enter Principalamt:");
-			vo.setPamt(scn.nextFloat());
+			vo.setPamt(scn.next());
 			System.out.println("Enter rate:");
-			vo.setRate(scn.nextFloat());
+			vo.setRate(scn.next());
 			System.out.println("Enter time:");
-			vo.setTime(scn.nextFloat());
+			vo.setTime(scn.next());
 		
 		   String res=ctm.processCustomer(vo);
 		   System.out.println(res);
