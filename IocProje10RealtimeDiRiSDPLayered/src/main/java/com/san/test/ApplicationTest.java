@@ -15,7 +15,7 @@ public class ApplicationTest {
 
 	public static void main(String[] args) throws IOException {
 		CustomerVO vo=new CustomerVO();
-		ApplicationContext ctx=new FileSystemXmlApplicationContext("src\\main\\resources\\applicationContext.xml");
+		ApplicationContext ctx=new ClassPathXmlApplicationContext("com/san/cfgs/applicationContext.xml");
 		CustomerController ctm=ctx.getBean("controller",CustomerController.class);
 		try (Scanner scn = new Scanner(System.in)) {
 			System.out.println("Enter Cno:");

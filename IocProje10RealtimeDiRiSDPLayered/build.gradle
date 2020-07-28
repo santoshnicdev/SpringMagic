@@ -26,6 +26,14 @@ repositories {
     // You can declare any Maven/Ivy/file repository here.
     mavenCentral()
 }
+sourceSets {
+    main {
+        resources {
+            srcDirs = ["src/main/java"]
+            includes = ["**/*.xml"]
+        }
+    }
+}
 
 dependencies {
     
